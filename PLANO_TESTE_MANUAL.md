@@ -1,7 +1,7 @@
 # PLANO DE TESTE MANUAL - Desbravador QA Challenge
 ## Versão 1.0 | 11 de novembro de 2026
 
-**Analista QA Sênior:** Bianca Ferreira  
+**Analista QA Sênior:** Bianca França  
 **Projeto:** Desbravador - Desafio de Automação QA (Sistema de Reservas Hotel)  
 **Ambiente:** Homologação (https://reservas.desbravador.com.br)  
 **Navegadores:** Chromium (Desktop) e Mobile (Pixel 7)  
@@ -186,7 +186,7 @@ EXPECTED: [Comportamento esperado]
 ACTUAL: [Comportamento observado]
 EVidência: Screenshot | Video | Trace ID | Link
 DATA DESCOBERTA: DD/MM/AAAA
-ANALISTA: Bianca Ferreira
+ANALISTA: Bianca França
 ```
 
 ---
@@ -335,7 +335,7 @@ Após correção dos bugs críticos:
 ## 9. ASSINATURAS
 
 **Elaborado por:**  
-**Bianca Ferreira** - Analista QA Sênior  
+**Bianca França** - Analista QA Sênior  
 **Data:** 11/11/2026  
 **Versão:** 1.0  
 

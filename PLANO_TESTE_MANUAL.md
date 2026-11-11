@@ -364,3 +364,29 @@ Todos os arquivos abaixo estão versionados no repositório `https://github.com/
 | `TESTES_TODOS_CENARIOS.md` | Documento de referência de cenários | 9.3KB |
 
 ---
+## 10. MATRIZ DE RIEGOS (Risk Matrix)
+
+### 10.1. Avaliação de Risco por Cenário
+
+| CT | Título | Probabilidade de Falha | Impacto no Negócio | Risco Total | Mitigação |
+|----|--------|----------------------|--------------------|-------------|-----------|
+| **CT01** | Consultar disponibilidade | Alta ⚠️ | Alta (porta de entrada) | **Alto** | Corrigir navegação de meses no calendário |
+| **CT04** | Rejeitar período inválido | Média | Média (regra de negócio) | **Média** | Implementar validação front-end + back-end |
+| **CT05** | Rejeitar datas passadas | Média | Média (integridade dados) | **Média** | Validar no servidor + impedir calendário passado |
+| **CT06** | Preços válidos | Alta | Alta (financeiro/jurídico) | **Alto** | Corrigir formatação API e exibição front-end |
+| **CT07** | Seletor adultos | Alta | Alta (usabilidade) | **Alto** | Redesenhar seletor + validar API occupancy |
+| **CT08** | Adicionar ao carrinho | Alta | Alta (conversão) | **Alto** | Corrigir BUG-01 primeiro, então validar |
+| **CT10** | Reserva completa | Alta | Muito Alta (faturamento) | **Crítico** | Depende integralmente da correção do BUG-01 |
+| **CT11/CT12** | Pagamento/cartão | Média | Alta (financeiro) | **Alta** | Ajustar testes para data futura; registrar divergência |
+| **CT15** | Link hotel sem config | Baixa | Média (usabilidade) | **Média** | Tratar erro no gateway e exibir mensagem amigável |
+| **CT16** | Checkout vazio | Baixa | Baixa (flusso alternativo) | **Baixa** | Validar redirecionamento; manter como regressão |
+
+### 10.2. Matriz de Risco Resumida
+
+| Nível de Risco | Quantidade de CTs | Ações Recomendadas |
+|----------------|-------------------|-------------------|
+| **Crítico** | 1 (CT10) | Bloqueia release; correção urgente necessária |
+| **Alto** | 5 (CT01, CT06, CT07, CT08, CT11/CT12) | Correção na Sprint 1-2; impacta entrega |
+| **Média** | 4 (CT04, CT05, CT15, CT02/03 laterais) | Correção na Sprint 3-4; validar após fixes |
+| **Baixa** | 1 (CT16) | Manter como regressão; baixa prioridade de correção |
+
